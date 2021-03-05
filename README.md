@@ -1,2 +1,5 @@
 # SISTEMA-ACADEMICO
-##### Comming soon
+
+### INSTALACIÓN EN LOCAL
+
+`pip install -r requirement.txt`
