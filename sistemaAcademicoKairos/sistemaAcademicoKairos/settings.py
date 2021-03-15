@@ -79,9 +79,9 @@ WSGI_APPLICATION = 'sistemaAcademicoKairos.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'mysql_cymysql',
-        'NAME': 'name',
+        'NAME': 'kairos',
         'USER': 'root',
-        'PASSWORD': '1234',
+        'PASSWORD': 'J10SK4',
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -125,7 +125,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-
 STATICFILES_DIRS= [
     BASE_DIR / 'static'
 ]
+MEDIA_ROOT = BASE_DIR / 'media/'
+MEDIA_URL = '/media/'

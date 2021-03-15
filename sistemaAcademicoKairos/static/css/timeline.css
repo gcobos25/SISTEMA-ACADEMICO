@@ -154,3 +154,7 @@
     text-align: right;
   }
 }
+
+.full-cover-background{
+    background-image:url(img/font-login.jpg);
+}
