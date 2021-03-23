@@ -38,7 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'AcademicoKairos',
+    'dbbackup'
 ]
+
+DBBACKUP_STORAGE = 'dbbackup.storage.s3_storage'
+DBBACKUP_STORAGE_OPTIONS = {'location': BASE_DIR / 'backup'}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
