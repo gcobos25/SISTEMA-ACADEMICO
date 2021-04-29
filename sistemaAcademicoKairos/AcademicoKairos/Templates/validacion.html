@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validacion de Usuarios</title>
+</head>
+<body>
+    <from method="post" action="#">
+        <label for="letras">Usuario</label>
+        <input minlength="8" maxlength="16"type="text" name="letras" required="" pattern="[a-zA-Z]+">
+        <br>
+        <label for="numeros">Contaseña</label>
+        <input minlength="6" maxlength="12" type="text" name="numeros" required="" pattern="[0-9]+">
+        <br>
+        <button>Enviar</button>
+    </from>
+
+</body>
+</html>
