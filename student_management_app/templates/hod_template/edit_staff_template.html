@@ -1,0 +1,104 @@
+{% extends 'hod_template/base_template.html' %}
+
+{% block page_title %}
+    Editar Profesores | Nombre de Usuario: {{ staff.admin.username }} | #ID : {{ staff.admin.id }}
+{% endblock page_title %}
+
+{% block main_content %}
+
+{% load static %}
+
+<section class="content">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- general form elements -->
+                    <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Editar Profesores</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form role="form" method="POST" action="{% url 'edit_staff_save' %}">
+                        {% csrf_token %}
+
+                        
+                                {% comment %} Display Messages {% endcomment %}
+                                {% if messages %}
+                                <div class="form-group">
+                                <div class="col-12">
+                                    {% for message in messages %}
+                                    {% if message.tags == "error" %}
+                                        <div class="alert alert-danger alert-dismissible fade show" role="alert" style="margin-top: 10px;">
+                                        {{ message }}
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        </div>
+                                    {% elif message.tags == "success" %}
+                                        <div class="alert alert-success alert-dismissible fade show" role="alert" style="margin-top: 10px;">
+                                        {{ message }}
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        </div>
+                                    {% endif %}
+                                    {% endfor %}
+                                </div>
+                                </div>
+                                {% endif %}
+                            
+
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label>Correo Electronico</label>
+                                <input type="email" class="form-control" name="Correo Electronico" value="{{ staff.admin.email }}">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Nombre de usuario</label>
+                                <input type="text" class="form-control" name="Nombre de usuario" value="{{ staff.admin.username }}">
+                            </div>
+
+                            {% comment %} <div class="form-group">
+                                <label>Contraseña</label>
+                                <input type="password" class="form-control" name="Contraseña" value="{{ staff.admin.password }}">
+                            </div> {% endcomment %}
+
+                            <div class="form-group">
+                                <label>Nombres</label>
+                                <input type="text" class="form-control" name="Nombres" value="{{ staff.admin.first_name }}">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Apellidos</label>
+                                <input type="text" class="form-control" name="Apellidos" value="{{ staff.admin.last_name }}">
+                                <input type="hidden" name="staff_id" value="{{ staff.admin.id }}" />
+                            </div>
+
+                            <div class="form-group">
+                                <label>Dirección</label>
+                                <textarea class="form-control" name="Dirección">{{ staff.address }}</textarea>
+                            </div>
+
+                            
+
+
+                        </div>
+                        <!-- /.card-body -->
+
+                        <div class="card-footer">
+                        <button type="submit" class="btn btn-primary">Actualizar</button>
+                        </div>
+                    </form>
+                    </div>
+                    <!-- /.card -->
+
+                </div>
+            </div>
+
+        </div><!-- /.container-fluid -->
+      </section>
+
+  {% endblock main_content %}
