@@ -72,6 +72,22 @@ class Students(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     objects = models.Manager()
+    #jioska
+    disease = models.CharField(max_length=50, blank=True)
+    Blood_type = models.CharField(max_length=5, blank=True)
+    personal_references1 = models.CharField(max_length=100, blank=True)
+    personal_references2 = models.CharField(max_length=100, blank=True)
+    personal_references3 = models.CharField(max_length=100, blank=True)
+    personal_references4 = models.CharField(max_length=100, blank=True)
+    personal_references5 = models.CharField(max_length=100, blank=True)
+    personal_references6 = models.CharField(max_length=100, blank=True)
+    personal_references7 = models.CharField(max_length=100, blank=True)
+    personal_references8 = models.CharField(max_length=100, blank=True)
+    personal_references9 = models.CharField(max_length=100, blank=True)
+    personal_references10 = models.CharField(max_length=100, blank=True)
+    mobile = models.CharField(max_length=12, blank=True)
+    case_of_emergency = models.CharField(max_length=12, blank=True)
+    etnia = models.CharField(max_length=25, blank=True)
 
 
 class Attendance(models.Model):

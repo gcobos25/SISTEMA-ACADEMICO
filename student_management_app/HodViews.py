@@ -347,6 +347,22 @@ def add_student_save(request):
             session_year_id = form.cleaned_data['session_year_id']
             course_id = form.cleaned_data['course_id']
             gender = form.cleaned_data['gender']
+            #jioska
+            disease = form.cleaned_data ['disease']
+            Blood_type = form.cleaned_data['Blood_type']
+            mobile = form.cleaned_data['mobile']
+            case_of_emergency = form.cleaned_data['case_of_emergency']
+            etnia = form.cleaned_data['etnia']
+            personal_references1 = form.cleaned_data['personal_references1']
+            personal_references2 = form.cleaned_data['personal_references2']
+            personal_references3 = form.cleaned_data['personal_references3']
+            personal_references4 = form.cleaned_data['personal_references4']
+            personal_references5 = form.cleaned_data['personal_references5']
+            personal_references6 = form.cleaned_data['personal_references6']
+            personal_references7 = form.cleaned_data['personal_references7']
+            personal_references8 = form.cleaned_data['personal_references8']
+            personal_references9 = form.cleaned_data['personal_references9']
+            personal_references10 = form.cleaned_data['personal_references10']
 
             # Getting Profile Pic first
             # First Check whether the file is selected or not
@@ -405,6 +421,7 @@ def edit_student(request, student_id):
     form.fields['course_id'].initial = student.course_id.id
     form.fields['gender'].initial = student.gender
     form.fields['session_year_id'].initial = student.session_year_id.id
+    #jioska
 
     context = {
         "id": student_id,
@@ -432,6 +449,22 @@ def edit_student_save(request):
             course_id = form.cleaned_data['course_id']
             gender = form.cleaned_data['gender']
             session_year_id = form.cleaned_data['session_year_id']
+            #jioska
+            disease = form.cleaned_data ['disease']
+            Blood_type = form.cleaned_data['Blood_type']
+            mobile = form.cleaned_data['mobile']
+            case_of_emergency = form.cleaned_data['case_of_emergency']
+            etnia = form.cleaned_data['etnia']
+            personal_references1 = form.cleaned_data['personal_references1']
+            personal_references2 = form.cleaned_data['personal_references2']
+            personal_references3 = form.cleaned_data['personal_references3']
+            personal_references4 = form.cleaned_data['personal_references4']
+            personal_references5 = form.cleaned_data['personal_references5']
+            personal_references6 = form.cleaned_data['personal_references6']
+            personal_references7 = form.cleaned_data['personal_references7']
+            personal_references8 = form.cleaned_data['personal_references8']
+            personal_references9 = form.cleaned_data['personal_references9']
+            personal_references10 = form.cleaned_data['personal_references10']
 
             # Getting Profile Pic first
             # First Check whether the file is selected or not
